@@ -25,8 +25,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-1L-dxi">
-                                <rect key="frame" x="86" y="409" width="221" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-1L-dxi">
+                                <rect key="frame" x="86" y="421" width="221" height="10"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Press me Button"/>
                                 <connections>
@@ -38,6 +38,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="APK-tR-lLB" secondAttribute="bottom" constant="332" id="Ciq-i5-Ifk"/>
+                            <constraint firstItem="kSA-1L-dxi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="J6J-aK-Uqu"/>
+                            <constraint firstItem="kSA-1L-dxi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lzx-BV-fNh"/>
+                            <constraint firstItem="kSA-1L-dxi" firstAttribute="centerX" secondItem="APK-tR-lLB" secondAttribute="centerX" id="TRa-yt-ecA"/>
                             <constraint firstItem="APK-tR-lLB" firstAttribute="top" secondItem="kSA-1L-dxi" secondAttribute="bottom" constant="30" id="UCr-9z-j4O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="APK-tR-lLB" secondAttribute="trailing" constant="10" id="Ugz-o6-Lgh"/>
                             <constraint firstItem="APK-tR-lLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="aHK-Yu-Y6f"/>
