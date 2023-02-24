@@ -11,13 +11,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    let restuarants = ["Kochi", "Crown Shy", "Dahamaka", "Rezodora"]
-    let food = ["Food 1", "Food 2", "Food 3", "Food 4"]
+    let restuarant = ["Kochi", "Crown Shy", "Dahamaka", "Rezodora"]
+    let food = [["Pizza", "Peter Burger"],
+                ["Cheese Salad", "Crispy Chicken"],
+                ["Hot Pot", "Sichuan Noodel"],
+                ["Bum", "Bake Lamb"]
+    ]
+    
+    var menu : [String] = []
 
     @IBOutlet weak var tblViewTop: UITableView!
     
     
     @IBOutlet weak var tblViewBottom: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,20 +32,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == tblViewTop {
-            return food.count
+            return restuarant.count
         } else{
-            return restuarants.count
+            return menu.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == tblViewTop {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = food[indexPath.row]
+            cell.textLabel?.text = restuarant[indexPath.row]
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = restuarants[indexPath.row]
+            cell.textLabel?.text = menu[indexPath.row]
             return cell
         }
     }
@@ -46,10 +53,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        
+        if tableView == tblViewTop {
+            let selectedRow = indexPath.row
+            
+            menu = food[selectedRow]
+            
+            self.tblViewBottom.reloadData()
         }
+
+    }
     
 }
 
